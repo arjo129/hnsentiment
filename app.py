@@ -1,9 +1,9 @@
 from texthandler import CommentCleaner, CommentClassifier
-from hackernews import HNApi
+from hackernews import HNApi, CommentRequest
 
 class AnalysisDaemon:
     def __init__(self):
-        self.hnapi = HNApi()
+        self.hnapi = CommentRequest()
         self.stories = self.hnapi.top_stories()
         self.classifier = CommentClassifier()
         
